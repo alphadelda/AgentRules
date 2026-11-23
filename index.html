@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Générateur de fichier AGENTS.md</title>
+</head>
+<body>
+  <main>
+    <h1>Générer un fichier AGENTS.md</h1>
+
+    <form>
+      <div>
+        <label for="nom-projet">Nom du projet</label>
+        <input type="text" id="nom-projet" name="nom-projet">
+      </div>
+
+      <div>
+        <label for="stack">Stack technique</label>
+        <select id="stack" name="stack">
+          <option value="html-js-vanilla">HTML/JS vanilla</option>
+          <option value="react">React</option>
+          <option value="vue">Vue</option>
+          <option value="nodejs">Node.js</option>
+          <option value="python">Python</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>Règles strictes</legend>
+        <div>
+          <input type="checkbox" id="regle-fichiers" name="regles" value="Ne pas créer de fichiers non demandés">
+          <label for="regle-fichiers">Ne pas créer de fichiers non demandés</label>
+        </div>
+        <div>
+          <input type="checkbox" id="regle-dependances" name="regles" value="Ne pas installer de dépendances externes">
+          <label for="regle-dependances">Ne pas installer de dépendances externes</label>
+        </div>
+        <div>
+          <input type="checkbox" id="regle-explications" name="regles" value="Toujours expliquer le code généré">
+          <label for="regle-explications">Toujours expliquer le code généré</label>
+        </div>
+        <div>
+          <input type="checkbox" id="regle-securite" name="regles" value="Respecter les bonnes pratiques de sécurité">
+          <label for="regle-securite">Respecter les bonnes pratiques de sécurité</label>
+        </div>
+      </fieldset>
+
+      <button type="button">Générer le fichier AGENTS.md</button>
+    </form>
+
+    <label for="resultat">Résultat</label>
+    <textarea id="resultat" name="resultat" rows="16" cols="80" readonly></textarea>
+  </main>
+</body>
+</html>
